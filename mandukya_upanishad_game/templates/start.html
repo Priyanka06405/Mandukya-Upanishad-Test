@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block content %}
+<div class="container"><div class="card center">
+<h2>नमस्ते, {{participant.name}} 🙏</h2>
+<h3>माण्डूक्य उपनिषद् ज्ञान-यात्रा</h3>
+<p>50 बहुविकल्पीय प्रश्न • प्रत्येक प्रश्न 1 अंक</p>
+<p>प्रश्नों का क्रम और विकल्प हर नए प्रयास में स्वतः बदलेंगे।</p>
+<a class="btn" href="{{url_for('begin')}}">खेल शुरू करें</a>
+</div></div>{% endblock %}

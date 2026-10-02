@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}
+<div class="container"><div class="card center">
+<h2>Quiz पहले ही पूरा किया जा चुका है</h2><p>{{participant.name}}, आपका प्रयास दर्ज है।</p>
+{% if attempt %}<h1>{{attempt.score}} / {{attempt.total_questions}}</h1>{% endif %}
+<a class="btn" href="{{url_for('logout')}}">Logout</a>
+</div></div>{% endblock %}

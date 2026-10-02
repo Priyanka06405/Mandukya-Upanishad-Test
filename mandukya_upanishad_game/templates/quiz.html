@@ -1,0 +1,15 @@
+{% extends "base.html" %}{% block title %}Quiz{% endblock %}{% block content %}
+<div class="container">
+<div class="card"><b>प्रतिभागी:</b> {{participant.name}} <span style="float:right">कुल प्रश्न: {{questions|length}}</span></div>
+<form method="post" onsubmit="return confirm('क्या आप अपना उत्तर-पत्र जमा करना चाहते हैं?');">
+{% for q in questions %}
+<div class="card question">
+<div class="qno">प्रश्न {{q.number}} / {{questions|length}}</div>
+<h3>{{q.question}}</h3>
+{% for o in q.options %}
+<label class="option"><input type="radio" name="question_{{q.id}}" value="{{o.letter}}"> <b>{{o.letter}}.</b> {{o.text}}</label>
+{% endfor %}
+</div>
+{% endfor %}
+<div class="card center"><button type="submit">उत्तर जमा करें</button></div>
+</form></div>{% endblock %}

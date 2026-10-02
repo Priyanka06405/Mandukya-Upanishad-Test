@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block content %}
+<div class="container"><div class="card center">
+<h2>🎉 Quiz Submitted</h2><p>धन्यवाद, {{participant.name}}!</p>
+<h1>{{attempt.score}} / {{attempt.total_questions}}</h1>
+<p>आपका स्कोर सफलतापूर्वक दर्ज हो गया है।</p>
+</div></div>{% endblock %}

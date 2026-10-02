@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}माण्डूक्य उपनिषद् ज्ञान-यात्रा{% endblock %}</title>
+<style>
+body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:linear-gradient(135deg,#fff7e6,#f5e8ff);color:#2d2140}
+.header{background:#5b2c83;color:#fff;padding:20px;text-align:center}
+.header h1{margin:0;font-size:30px}.header p{margin:6px 0 0}
+.container{max-width:1000px;margin:28px auto;padding:0 18px}
+.card{background:#fff;border-radius:18px;padding:26px;box-shadow:0 8px 25px #0001;margin-bottom:20px}
+input{width:100%;padding:13px;margin:8px 0 16px;border:1px solid #ddd;border-radius:10px;box-sizing:border-box}
+button,.btn{background:#5b2c83;color:#fff;border:0;padding:13px 22px;border-radius:10px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.secondary{background:#8a6aa5}.flash{background:#ffe4e4;padding:12px;border-radius:10px;margin-bottom:15px}
+.center{text-align:center}.muted{color:#777}
+.option{display:block;padding:14px;margin:10px 0;border:1px solid #ddd;border-radius:12px;cursor:pointer}
+.option:hover{background:#f6effb}.question{margin-bottom:24px}.qno{font-weight:bold;color:#5b2c83}
+.progress{height:10px;background:#eee;border-radius:10px;overflow:hidden}.progress div{height:100%;background:#5b2c83;width:100%}
+table{width:100%;border-collapse:collapse}th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+@media(max-width:650px){.header h1{font-size:22px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="header"><h1>ॐ माण्डूक्य उपनिषद्</h1><p>ज्ञान-यात्रा • 50 प्रश्न</p></div>
+{% with messages=get_flashed_messages() %}{% if messages %}<div class="container">{% for m in messages %}<div class="flash">{{m}}</div>{% endfor %}</div>{% endif %}{% endwith %}
+{% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}Login{% endblock %}{% block content %}
+<div class="container"><div class="card">
+<h2>Login</h2><form method="post">
+<label>Personal Number</label><input name="personal_number" required>
+<label>Password</label><input type="password" name="password" required>
+<button type="submit">Login</button>
+</form><p>नए प्रतिभागी? <a href="{{url_for('register')}}">Register</a></p>
+</div></div>{% endblock %}

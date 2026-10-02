@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<div class="container"><div class="card"><h2>Mandukya Quiz Results</h2>
+<table><tr><th>Name</th><th>Personal Number</th><th>Status</th><th>Score</th><th>Submitted</th></tr>
+{% for r in rows %}<tr><td>{{r.name}}</td><td>{{r.personal_number}}</td><td>{{r.status}}</td><td>{{r.score}}</td><td>{{r.submitted_at}}</td></tr>{% endfor %}
+</table></div></div>{% endblock %}

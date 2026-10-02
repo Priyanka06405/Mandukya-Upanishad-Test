@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block title %}पंजीकरण{% endblock %}{% block content %}
+<div class="container"><div class="card">
+<h2>पंजीकरण</h2><p class="muted">केवल नाम, Personal Number और Password भरें।</p>
+<form method="post">
+<label>नाम</label><input name="name" required>
+<label>Personal Number</label><input name="personal_number" required>
+<label>Password</label><input type="password" name="password" required>
+<button type="submit">पंजीकरण करें</button>
+</form>
+<p>पहले से पंजीकृत हैं? <a href="{{url_for('login')}}">Login</a></p>
+</div></div>{% endblock %}
